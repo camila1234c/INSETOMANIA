@@ -127,7 +127,7 @@ h1{
 
 p{ 
     text-align: center;
-    margin-top: 50px;
+    margin-top: 100px;
 }
 
 .galeria-btn {
@@ -136,10 +136,9 @@ p{
     font-size: 20px;
     padding: 12px 40px;
     border-radius: 15px;
-    cursor: pointer;
     transition: 0.3s;
-    margin-top: 55px;
     margin-left: 400px;
+    margin-top: -1000px;
 }
 
 .galeria-btn:hover {
@@ -152,10 +151,11 @@ p{
         
         <nav class="menu" id="menu">
             <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
-            <a href="Pag_inicial.html">Galeria</a>
-            <a href="biografia.html">Curiosidades</a>
-            <a href="Show.html">Cadastro</a>
-            <a href="Loja.html">Importância</a>
+             <a href="pagina inicial.html">Inicio</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="curioidades.html">Curiosidades</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="importancia.html">Importância</a>
             <a href="evento.html">Doenças</a>
             <a href="centraldefas.html">Notícias</a>
             <a href="centraldefas.html">Comentarios</a>
@@ -172,7 +172,7 @@ p{
         <div class="retangulo">
         <h1> DESCUBRA O FASCINANTE MUNDO DOS INSETOS</h1>
         <p> De borboletas delicadas a besouros poderosos, explore a biodiversidade da endomologia.</p>
-        <button class="galeria-btn">GALERIA</button>
+        <a href="galeria.html" class="galeria-btn">Galeria</a>
         </div>
 
 </body>
