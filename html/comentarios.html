@@ -1,30 +1,219 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>INSETOMANIA - Comentários</title>
-    <link rel="stylesheet" href="styles.css"> </head>
-    <body>
-   <header class="header">
+    
+</head>
+<style>
+    
+
+    :root {
+        --header-bg-color: #90ee90;
+        --main-bg-color: #698b69;
+        --text-color: #f0f0f0;
+        --title-color: #f0f0f0;
+        --comment-box-color: rgba(255, 255, 255, 0.3);
+        --username-color: #f0f0f0;
+        --time-color: #cccccc;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: Arial, sans-serif;
+    }
+
+    body {
+        background-color: #6a8c6a;
+        color: #f8f8f8;
+        line-height: 1.6;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .menu {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #2a2a2a;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .menu a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #f8f8f8;
+        display: block;
+        transition: 0.3s;
+        border-bottom: 1px solid #333;
+    }
+
+    .menu a:hover {
+        color: #000;
+        background-color: #abde6a;
+    }
+
+    .menu .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        border: none;
+    }
+
+    .menu-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    header {
+        background-color: #abde6a;
+        padding: 15px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #f8f8f8;
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+
+
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .hero {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 40px 5%;
+        min-height: 70vh;
+    }
+
+    .hero-content {
+        flex: 1;
+        min-width: 300px;
+        padding: 20px;
+
+    }
+
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-left: 250px;
+    }
+
+    .titulo h1 {
+        margin-left: -850px;
+        margin-top: -5px;
+    }
+
+
+    .titulocomentario {
+        max-width: 900px;
+        margin: 0 auto;
+        margin-top: 50px;
+    }
+
+    .title {
+        color: var(--title-color);
+        font-size: 1.5em;
+        font-weight: normal;
+        padding-bottom: 20px;
+        margin-bottom: 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .comentario-container {
+        display: flex;
+        margin-bottom: 25px;
+        align-items: flex-start;
+    }
+
+    .profile-pic {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-right: 15px;
+
+    }
+
+    .usuario {
+        flex-grow: 1;
+        color: var(--username-color);
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .username {
+        font-weight: bold;
+        margin-right: 10px;
+    }
+
+    .tempo {
+        color: var(--time-color);
+        font-size: 0.9em;
+        margin-right: auto;
+    }
+
+    .comentario {
+        width: 100%;
+        min-height: 40px;
+        background-color: var(--comment-box-color);
+        border-radius: 5px;
+        margin-top: 5px;
+        padding: 10px;
+    }
+</style>
+<body>
+    <header class="header">
         <div class="logo">
-          <a href="../img/logo.htm"><img src="https://i.ibb.co/hF3KRd9z/Download.png" alt="Download" border="0"></a>
-          </div>
-            <div class="titulo">
-                <h1>INSETOMANIA</h1>
-            </div>
-        
+            <a href="../img/logo.htm"><img src="https://i.ibb.co/hF3KRd9z/Download.png" alt="Download" border="0"></a>
+        </div>
+        <div class="titulo">
+            <h1>INSETOMANIA</h1>
+        </div>
+
         <nav class="menu" id="menu">
             <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
             <a href="pagina_inicial.html">Início</a>
             <a href="galeria.html">Galeria</a>
             <a href="curiosidades.html">curiosidades</a>
-               <a href="cadastro.html">Cadastro</a>
+            <a href="cadastro.html">Cadastro</a>
             <a href="importancia.html">Importancia</a>
             <a href="doenças.html">Doenças</a>
             <a href="noticias.html">Noticias</a>
-                  <a href="comentarios.html">Comentários</a>
-           
+            <a href="comentarios.html">Comentários</a>
+
         </nav>
 
         <button class="menu-btn" onclick="openMenu()">
@@ -40,7 +229,8 @@
             <h2 class="title">COMENTÁRIOS</h2>
 
             <div class="comentario-container">
-                <img src="https://i.pinimg.com/736x/62/6d/55/626d550b511ea7abeea6ec3e58dc4230.jpg" alt="Luiza Andrade" class="profile-pic">
+                <img src="https://i.pinimg.com/736x/62/6d/55/626d550b511ea7abeea6ec3e58dc4230.jpg" alt="Luiza Andrade"
+                    class="profile-pic">
                 <div class="usuario">
                     <p class="username">Luiza Andrade</p>
                     <p class="tempo">1h</p>
@@ -49,7 +239,8 @@
             </div>
 
             <div class="comentario-container">
-                <img src="https://i.pinimg.com/736x/f3/04/a0/f304a00d9951666e67021b4b3dffb3b5.jpg" alt=" Shivanne Alencar" class="profile-pic">
+                <img src="https://i.pinimg.com/736x/f3/04/a0/f304a00d9951666e67021b4b3dffb3b5.jpg"
+                    alt=" Shivanne Alencar" class="profile-pic">
                 <div class="usuario">
                     <p class="username">Shivanne Alencar</p>
                     <p class="tempo">4 dias atrás</p>
@@ -58,7 +249,8 @@
             </div>
 
             <div class="comentario-container">
-                <img src="https://i.pinimg.com/736x/cb/54/02/cb540297e9a697d1a4c087f95676abdd.jpg" alt="Foto de perfil de Junior Silva" class="profile-pic">
+                <img src="https://i.pinimg.com/736x/cb/54/02/cb540297e9a697d1a4c087f95676abdd.jpg"
+                    alt="Foto de perfil de Junior Silva" class="profile-pic">
                 <div class="usuario">
                     <p class="username">Junior Silva</p>
                     <p class="tempo">1 semana atrás</p>
@@ -66,6 +258,8 @@
                 </div>
             </div>
 
-            </section>
+        </section>
     </main>
 </body>
+<script src="../JS/script.js"></script>
+</html>
