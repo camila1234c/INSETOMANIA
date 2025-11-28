@@ -1,4 +1,4 @@
-<script>
+
     function openMenu() {
         document.getElementById("menu").style.width = "250px";
     }
@@ -88,4 +88,4 @@
             }
         });
     });
-    </script>
+    
