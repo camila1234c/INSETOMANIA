@@ -5,169 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>InsetoMania</title>
 </head>
-<style>
-    body {
-    background-color: #6a8c6a;
-    color: #f8f8f8;
-    line-height: 1.6;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-.menu {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    right: 0;
-    background-color: #2a2a2a;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.menu a {
-    padding: 10px 15px;
-    text-decoration: none;
-    font-size: 18px;
-    color: #f8f8f8;
-    display: block;
-    transition: 0.3s;
-    border-bottom: 1px solid #333;
-}
-
-.menu a:hover {
-    color: #000;
-    background-color: #abde6a;
-}
-
-.menu .closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px;
-    margin-left: 50px;
-    border: none;
-}
-
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-}
-
-header {
-    background-color: #abde6a;
-    padding: 15px 5%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-.bar {
-    width: 25px;
-    height: 3px;
-    background-color: #f8f8f8;
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
-
-
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.hero {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 40px 5%;
-    min-height: 70vh;
-}
-
-.hero-content {
-    flex: 1;
-    min-width: 300px;
-    padding: 20px;
-
-}
-
-.container {
-    display: flex;
-    gap: 80px;
-    
-}
-
-.retangulo{
-    width: 1000px;
-    height: 450px;
-    background-color: #3a673a;
-    padding: 10px;
-    display: inline-block;
-    border-radius: 10px;
-    margin-left: 100px;
-    margin-top: 120px;
-}
-
-h1{
-    text-align: center;
-    margin-top: 100px;
-}
-
-p{ 
-    text-align: center;
-    margin-top: 100px;
-}
-
-.galeria-btn {
-    background: linear-gradient(90deg, #00a651, #8dc63f);
-    color: white;
-    font-size: 20px;
-    padding: 12px 40px;
-    border-radius: 15px;
-    transition: 0.3s;
-    margin-left: 400px;
-    margin-top: -1000px;
-}
-
-.galeria-btn:hover {
-    transform: scale(1.05);
-    opacity: 0.9;
-}
-</style>
 <body>
     <header class="header">
         <div class="logo">
-            <img src="../img/download (3).png" alt="Free-PNG-Vibrant-Mosquito-Insect-Art-Disease-Vector-Public-Health-Concept" border="0"></a>
+          <a href="../img/logo.htm"><img src="https://i.ibb.co/hF3KRd9z/Download.png" alt="Download" border="0"></a>
+          </div>
             <div class="titulo">
                 <h1>INSETOMANIA</h1>
             </div>
-        </div>
+        
         <nav class="menu" id="menu">
             <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
-            <a href="inicio.html">Início</a>
-            <a href="estilos_de_buffet.html">Estilos De Buffet</a>
-            <a href="cardapio.html">Cardápio</a>
-            <a href="eventos.html">Eventos</a>
-            <a href="contato.html">Contato</a>
-            <a href="sobre.html">Sobre</a>
-            <a href="orcamento.html">Área De Atendimento</a>
-            <a href="feedback.html">Feedback</a>
+            <a href="pagina_inicial.html">Início</a>
             <a href="galeria.html">Galeria</a>
-            <a href="sazonalidade.html">Sazonalidade</a>
-            <a href="servicos_adicionais.html">Serviços Adicionais</a>
-            <a href="faq.html">FAQ</a>
+            <a href="curiosidades.html">curiosidades</a>
+            <a href="cadastro.html">Cadastro</a>
+            <a href="importancia.html">Importancia</a>
+            <a href="doenças.html">Doenças</a>
+            <a href="noticias.html">Noticias</a>
+            <a href="comentarios.html">Comentários</a>
+           
         </nav>
 
         <button class="menu-btn" onclick="openMenu()">
@@ -186,95 +43,3 @@ p{
         </div>
 
 </body>
-<script>
-function openMenu() {
-    document.getElementById("menu").style.width = "250px";
-}
-
-function closeMenu() {
-    document.getElementById("menu").style.width = "0";
-}
-
-
-document.addEventListener('click', function (event) {
-    const menu = document.getElementById('menu');
-    const menuBtn = document.querySelector('.menu-btn');
-
-    if (!menu.contains(event.target) && event.target !== menuBtn && !menuBtn.contains(event.target)) {
-        closeMenu();
-    }
-});
-
-function validateForm(formId) {
-    const form = document.getElementById(formId);
-    const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
-    let isValid = true;
-
-    inputs.forEach(input => {
-        if (!input.value.trim()) {
-            input.style.borderColor = 'red';
-            isValid = false;
-        } else {
-            input.style.borderColor = '#ddd';
-        }
-    });
-
-
-    const emailInput = form.querySelector('input[type="email"]');
-    if (emailInput && !isValidEmail(emailInput.value)) {
-        emailInput.style.borderColor = 'red';
-        isValid = false;
-        alert('Por favor, insira um e-mail válido.');
-    }
-
-    return isValid;
-}
-
-function isValidEmail(email) {
-    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return re.test(email);
-}
-
-
-function showSuccessMessage() {
-    alert('Seu cadastro foi feito com sucesso!');
-    window.location.href = 'index.html';
-}
-
-
-function phoneMask(input) {
-    const text = input.value;
-    const textOnlyNumbers = text.replace(/\D/g, '').substring(0, 11);
-
-    let telefone = textOnlyNumbers.replace(/^(\d{2})(\d)/g, '($1) $2');
-    if (textOnlyNumbers.length > 6) {
-        telefone = telefone.replace(/(\d{5})(\d)/, '$1-$2');
-    }
-
-    input.value = telefone;
-}
-
-
-document.addEventListener('DOMContentLoaded', function () {
-    const phoneInputs = document.querySelectorAll('input[type="tel"]');
-    phoneInputs.forEach(input => {
-        input.addEventListener('input', function () {
-            phoneMask(this);
-        });
-    });
-
-
-    const currentPage = location.pathname.split('/').pop();
-    const menuLinks = document.querySelectorAll('.menu a');
-
-    menuLinks.forEach(link => {
-        const linkPage = link.getAttribute('href');
-        if (linkPage === currentPage || (currentPage === '' && linkPage === 'index.html')) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
-});
-</script>
-</html>
