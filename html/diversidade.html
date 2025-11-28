@@ -3,8 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
     <title>InsetoMania</title>
 </head>
+<style>
+    
+
+    body {
+        background-color: #6a8c6a;
+        color: #f8f8f8;
+        line-height: 1.6;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .menu {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #2a2a2a;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .menu a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #f8f8f8;
+        display: block;
+        transition: 0.3s;
+        border-bottom: 1px solid #333;
+    }
+
+    .menu a:hover {
+        color: #000;
+        background-color: #abde6a;
+    }
+
+    .menu .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        border: none;
+    }
+
+    .menu-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    header {
+        background-color: #abde6a;
+        padding: 15px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #f8f8f8;
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+
+
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .hero {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 40px 5%;
+        min-height: 70vh;
+    }
+
+    .hero-content {
+        flex: 1;
+        min-width: 300px;
+        padding: 20px;
+
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-left: 250px;
+    }
+
+    .titulo h1 {
+        margin-left: -855px;
+        margin-top: 30px;
+    }
+
+    .img {
+        margin-left: 100px;
+        margin-top: 50px;
+    }
+
+    .tituloimg {
+        margin-left: 1000px;
+        margin-top: -530px;
+    }
+
+    .texto h4 {
+        margin-left: 710px;
+        font-size: 25px;
+    }
+</style>
 <body>
     <header class="header">
         <div class="logo">
@@ -48,3 +175,5 @@
 
  
 </body>
+<script src="../JS/script.js"></script>
+</html>
