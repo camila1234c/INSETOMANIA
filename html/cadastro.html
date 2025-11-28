@@ -1,21 +1,186 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastro - Insetomania</title>
-    <link rel="stylesheet" href="cadastro.css">
+
 </head>
+<style>
+    body {
+        background-color: #6a8c6a;
+        color: #f8f8f8;
+        line-height: 1.6;
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+
+    .menu {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        right: 0;
+        background-color: #2a2a2a;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+    .menu a {
+        padding: 10px 15px;
+        text-decoration: none;
+        font-size: 18px;
+        color: #f8f8f8;
+        display: block;
+        transition: 0.3s;
+        border-bottom: 1px solid #333;
+    }
+
+    .menu a:hover {
+        color: #000;
+        background-color: #abde6a;
+    }
+
+    .menu .closebtn {
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        border: none;
+    }
+
+    .menu-btn {
+        background: none;
+        border: none;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    header {
+        background-color: #abde6a;
+        padding: 15px 5%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #f8f8f8;
+        margin: 3px 0;
+        transition: 0.3s;
+    }
+
+
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+    }
+
+    .hero {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 40px 5%;
+        min-height: 70vh;
+    }
+
+    .hero-content {
+        flex: 1;
+        min-width: 300px;
+        padding: 20px;
+
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        margin-left: 250px;
+    }
+
+    .titulo h1 {
+        margin-left: -855px;
+        margin-top: 10px;
+    }
+
+    .conteudo {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        margin-top: 40px;
+        padding-bottom: 40px;
+    }
+
+    .formulario {
+        display: flex;
+        flex-direction: column;
+        width: 420px;
+        color: white;
+    }
+
+    .formulario h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        font-size: 26px;
+    }
+
+    label {
+        margin: 10px 0 5px 0;
+    }
+
+    input {
+        background-color: #2f5d34;
+        border: none;
+        padding: 12px;
+        color: white;
+        border-radius: 10px;
+        font-size: 16px;
+    }
+
+    input::placeholder {
+        color: #d6e8d6;
+    }
+
+    .btn {
+        margin-top: 25px;
+        background-color: #345c37;
+        color: white;
+        padding: 14px;
+        border: none;
+        border-radius: 12px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: 0.3s;
+    }
+
+    .btn:hover {
+        background-color: #2c4e2f;
+    }
+</style>
+
 <body>
 
     <header class="header">
         <div class="logo">
-          <a href="../img/logo.htm"><img src="https://i.ibb.co/hF3KRd9z/Download.png" alt="Download" border="0"></a>
-          </div>
-            <div class="titulo">
-                <h1>INSETOMANIA</h1>
-            </div>
-        
+            <a href="../img/logo.htm"><img src="https://i.ibb.co/hF3KRd9z/Download.png" alt="Download" border="0"></a>
+        </div>
+        <div class="titulo">
+            <h1>INSETOMANIA</h1>
+        </div>
+
         <nav class="menu" id="menu">
             <a href="javascript:void(0)" class="closebtn" onclick="closeMenu()">&times;</a>
             <a href="pagina_inicial.html">Início</a>
@@ -26,7 +191,7 @@
             <a href="doenças.html">Doenças</a>
             <a href="noticias.html">Noticias</a>
             <a href="comentarios.html">Comentários</a>
-           
+
         </nav>
 
         <button class="menu-btn" onclick="openMenu()">
@@ -70,3 +235,5 @@
     </section>
 
 </body>
+<script src="../JS/script.js"></script>
+</html>
